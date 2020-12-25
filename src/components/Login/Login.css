@@ -1,0 +1,155 @@
+.login {
+  width: 60%;
+  background-color: #00000090;
+  backdrop-filter: blur(2px);
+  border-right: 5px solid #7991c1;
+}
+
+.login-heading {
+  padding: 30px 30px;
+  width: 85%;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: white;
+  border-bottom: 1px solid #7991c1;
+}
+
+.login-register-content {
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 30px 30px 15px 30px;
+}
+
+.sign-slider {
+  position: absolute;
+  bottom: 0;
+  left: 55px;
+  height: 2px;
+  width: 100px;
+  background-color: #7991c1;
+  animation: toleft 0.4s ease forwards;
+}
+
+.sign-slider-right {
+  animation: toright 0.4s ease forwards;
+}
+
+@keyframes toright {
+  0% {
+    left: 55px;
+  }
+  100% {
+    left: 170px;
+  }
+}
+
+@keyframes toleft {
+  0% {
+    left: 170px;
+  }
+  100% {
+    left: 55px;
+  }
+}
+
+.sign-in,
+.sign-up {
+  color: white;
+  font-size: 1.2em;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sign-in:hover,
+.sign-up:hover {
+  color: rgba(255, 255, 255, 0.624);
+  transition: 0.2s;
+}
+
+.sign-in-form {
+  color: #ffffff;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.input-title {
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 5px 0;
+}
+
+.form-input {
+  color: #ffffff;
+  height: 25px;
+  background: none;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #ffffff31;
+  width: 100%;
+  transition: 0.25s ease;
+}
+
+.form-input:focus {
+  border-bottom-color: #ffffffa4;
+  transition: 0.3s ease;
+}
+
+.about-bank {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 100%;
+}
+
+.about-header {
+  color: #ffffff;
+  font-size: 1.5em;
+  padding: 30px;
+}
+
+.bank-features {
+  color: #ffffff;
+  list-style: "-  ";
+}
+
+.bank-feature {
+  padding: 10px 0;
+}
+
+.about-bank-footer {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 0 30px;
+  font-size: 0.9em;
+  transition: 0.25s ease;
+}
+
+.about-bank-footer div {
+  cursor: pointer;
+}
+
+.about-bank-footer div:hover {
+  color: #ffffffa4;
+  transition: 0.3s ease;
+}
