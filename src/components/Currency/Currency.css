@@ -5,6 +5,24 @@
   border-right: 5px solid #7991c1;
 }
 
+.currency-small {
+  animation: loyalCurrency 0.5s;
+  width: 25%;
+  background-color: #00000090;
+  backdrop-filter: blur(2px);
+  border-right: 5px solid #7991c1;
+  transition: 0.5s ease;
+}
+
+@keyframes loyalCurrency {
+  0% {
+    width: 35%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
 .currency-header {
   display: flex;
   flex-direction: row;

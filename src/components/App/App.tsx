@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
     return (
         <div className="app">
             <Header />
-            <MainContent setLogged={() => loggedHandler()}/>
+            <MainContent setLogged={() => loggedHandler()} isLogged={isLogged}/>
         </div>
     );
 }

@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import CryptoApi from '../../services/CryptoService/CryptoApi';
 import './Currency.css';
 
-const Currency = (): JSX.Element => {
+const Currency = ({isLogged}:any): JSX.Element => {
     const cryptoApi = new CryptoApi();
     const [isLoading, setLoading]: any = useState<boolean>(true)
     const [items, setItems] = useState<[]>([]);
+
+    const currencyClass = 'currency';
+    const currencyClassSmall = 'currency-small';
 
     useEffect(() => {
         const data = cryptoApi.getData(value);
@@ -40,7 +43,7 @@ const Currency = (): JSX.Element => {
     )
 
     return (
-        <div className="currency">
+        <div className={isLogged?currencyClassSmall:currencyClass}>
             <div className="currency-header">
                 <div className="currency-heading">cryptocurrency rates</div>
                 <div className="currency-value">

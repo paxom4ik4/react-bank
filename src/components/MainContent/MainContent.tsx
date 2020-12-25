@@ -3,12 +3,14 @@ import Login from '../Login/'
 import Currency from '../Currency/'
 
 import './MainContent.css';
+import UserPage from '../UserPage';
 
-const MainContent = ({setLogged}: any)=> {
+const MainContent = ({setLogged, isLogged}: any)=> {
+
     return (
         <div className="main-content">
-            <Login setLogged={setLogged}/>
-            <Currency />
+            {isLogged?<UserPage />:<Login setLogged={setLogged}/>}
+            <Currency isLogged={isLogged}/>
         </div>
     )
 }

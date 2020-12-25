@@ -1,0 +1,14 @@
+.user-page {
+  width: 70%;
+  animation: loyalUserPage 0.7s ease;
+  background-color: #00000090;
+}
+
+@keyframes loyalUserPage {
+  0% {
+    width: 60%;
+  }
+  100% {
+    width: 70%;
+  }
+}

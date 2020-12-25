@@ -15,7 +15,7 @@
 }
 
 .login-register-content {
-  height: 85%;
+  height: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -125,6 +125,7 @@
 }
 
 .bank-features {
+  min-height: 300px;
   color: #ffffff;
   list-style: "-  ";
 }

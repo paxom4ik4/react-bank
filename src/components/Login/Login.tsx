@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import users from '../../dataBase/users';
+import Users from '../../dataBase/users';
 import './Login.css';
 import features from './bankFeatures';
 
@@ -27,13 +27,15 @@ const Login = ({setLogged}:any): JSX.Element => {
 
     const onEnterHandler = (e: any) => {
         e.preventDefault();
+        let users = new Users().users;
         for(let key of users) {
             const values = Object.values(key);
-            if(values[0] === loginUsername.trim() && values[1] === loginPassword) {
+            if(values[1] === loginUsername.trim() && values[2] === loginPassword) {
                 setLogged()
+                break;
             }
             else {
-                alert("Неверный пароль или логин");
+                console.log('finding...')
             }
         };
     }
