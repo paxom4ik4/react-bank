@@ -1,4 +1,4 @@
-const features = [
+const features: Array<string> = [
     'Unlimited money transfer',
     'Buying cryptocurrencies from your account',
     'Transfer of any currencies between users by account number',

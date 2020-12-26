@@ -4,7 +4,7 @@ import MainContent from '../MainContent';
 import './App.css';
 
 const App = (): JSX.Element => {
-    const [isLogged, setLogged] = useState<boolean>(false);
+    const [isLogged, setLogged] = useState<boolean>(true);
     const [currentUser, setCurrentUser] = useState<string>('admin');
 
     const loggedHandler = () => {
