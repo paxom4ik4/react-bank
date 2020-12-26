@@ -3,11 +3,15 @@ import Users from '../../dataBase/users';
 import './Login.css';
 import features from './bankFeatures';
 
-const Login = ({setLogged}:any): JSX.Element => {
+interface ILoginProps {
+    setLogged: () => void,
+    setCurrentUser: (e: string) => void;
+}
+
+const Login = ({setLogged, setCurrentUser}:ILoginProps): JSX.Element => {
     const [isRegisterBtns, changeRegisterBtns] = useState<boolean>(false);
     const sliderRightClass: string = 'sign-slider sign-slider-right';
     const sliderLeftClass: string = 'sign-slider';
-
     // Controlled inputs
     // Login (Email | login)
     const [loginUsername, setLoginUsername] = useState<string>('');
@@ -21,9 +25,7 @@ const Login = ({setLogged}:any): JSX.Element => {
         const value = e.target.value;
         setLoginPassword(value);
     }
-
     // Аналогично сделай для Registration (Controlled components)
-
 
     const onEnterHandler = (e: any) => {
         e.preventDefault();
@@ -38,6 +40,7 @@ const Login = ({setLogged}:any): JSX.Element => {
                 console.log('finding...')
             }
         };
+        setCurrentUser(loginUsername);
     }
 
     const signIn = (
@@ -45,14 +48,14 @@ const Login = ({setLogged}:any): JSX.Element => {
             <form>
                 <div className="input-login">
                     <div className="input-title">Enter e-mail or login</div>
-                    <input type="text" className="form-input" value={loginUsername} onChange={(e) => loginUsernameHandler(e)} />
+                    <input placeholder="username" type="text" className="form-input" value={loginUsername} onChange={(e) => loginUsernameHandler(e)} />
                 </div>
                 <div className="input-pass">
                     <div className="input-title">Enter your password</div>
-                    <input type="password" className="form-input" value={loginPassword} onChange={(e) => loginPasswordHandler(e)}/>
+                    <input placeholder="password" type="password" className="form-input" value={loginPassword} onChange={(e) => loginPasswordHandler(e)}/>
                 </div>
                 <div className="input-enter">
-                    <input type="submit" className="input-title" value='Enter' onClick={(e) => onEnterHandler(e)}></input>
+                    <input type="submit" className="enter-btn input-title" value='Enter' onClick={(e) => onEnterHandler(e)}></input>
                 </div>
             </form>
         </div>

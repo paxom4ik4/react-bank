@@ -1,0 +1,30 @@
+.user-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: white;
+  width: 90%;
+  height: 5%;
+  padding: 30px 30px;
+  border-bottom: 1px solid #7991c1;
+}
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.current-user-name {
+  margin-left: 10px;
+}
+.log-out {
+  font-size: 0.5em;
+  color: #ffffffa4;
+  transition: 0.25s;
+}
+.log-out:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ffffff;
+}
