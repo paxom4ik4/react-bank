@@ -1,0 +1,112 @@
+.wallet-page {
+  position: relative;
+  width: 100%;
+  height: 95%;
+  background-color: #00000090;
+  animation: loyalWalletPage 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@keyframes loyalWalletPage {
+  0% {
+    height: 0;
+    margin-top: 50%;
+    width: 100%;
+  }
+  100% {
+    height: 95%;
+    width: 100%;
+  }
+}
+
+.wallet-page-header {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  font-size: 2em;
+  color: #ffffff;
+  height: 8%;
+  border-bottom: 1px solid #7991c1;
+  width: 90%;
+}
+
+.wallet-id {
+  margin-top: 5%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.wallet-account {
+  height: 5%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.wallet-actions {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  font-size: 1.5em;
+  color: #ffffff;
+  width: 90%;
+}
+
+.wallet-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 60%;
+  color: #ffffff;
+  transition: 0.25s;
+}
+
+.wallet-action:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: none;
+}
+.wallet-action:active {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
+}
+
+.wallet-action .feature-icon {
+  font-size: 2.5em;
+}
+.wallet-action .feature-name {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.back-item {
+  left: 50%;
+  bottom: 1.5%;
+  transform: translateX(-50%);
+  position: absolute;
+  font-size: 2em;
+  transition: 0.5s;
+  color: #ffffff;
+}
+
+.back-item:hover {
+  cursor: none;
+  font-size: 2.5em;
+  transition: 0.5s ease;
+  bottom: 1%;
+}
+
+.back-item:active {
+  color: #ffffff62;
+}

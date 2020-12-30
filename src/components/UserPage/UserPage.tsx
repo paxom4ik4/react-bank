@@ -16,11 +16,12 @@ import './UserPage.css';
 
 
 interface IUserPageProps {
-    currentUser: string,
+    currentUser: object,
     setLogged: () => void,
+    setSection: (e:any) => void,
 }
 
-const UserPage = ({currentUser, setLogged}:IUserPageProps) => {
+const UserPage = ({currentUser, setLogged, setSection}:IUserPageProps) => {
     const walletIcon = <FontAwesomeIcon icon={faWallet}/>
     const moneyCheck = <FontAwesomeIcon icon={faMoneyCheck}/>
     const usersExcangeIcon = <FontAwesomeIcon icon={faUserCircle}/>
@@ -30,13 +31,16 @@ const UserPage = ({currentUser, setLogged}:IUserPageProps) => {
     const exchangeIcon = <FontAwesomeIcon icon={faExchangeAlt}/>
     const settingsIcon = <FontAwesomeIcon icon={faSlidersH}/>
 
+    const sectionHandler = (section: any) => {
+        setSection(section);
+    }
 
     return(
         <div className="user-page">
             <UserPageHeader currentUser={currentUser} setLogged={setLogged}/>
             <div className="user-features">
                 <div className="features-row">
-                    <div className="user-feature">
+                    <div className="user-feature" onClick={() => sectionHandler('wallet')}>
                         <div className="feature-icon">{walletIcon}</div>
                         <div className="feature-name">My Wallet</div>
                     </div>

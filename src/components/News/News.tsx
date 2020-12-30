@@ -22,7 +22,6 @@ const News = () => {
         setLoading(!isLoading);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    console.log(news)
     return(
         <div className="news-content">
             <div className="news-title">Financial News:</div>
@@ -30,10 +29,13 @@ const News = () => {
                 {news.map((item: any, index: number) => {
                     return (
                         <div className="news-item" key={index.toString()}>
-                            <a href={item.url}>
+                            <img src={item.urlToImage} alt="news-icon" className="news-img"/>
+                            <div className="news-body">
                                 <div className="news-title">{item.title}</div>
+                                <div className="news-author">{item.author}</div>
                                 <div className="news-description">{item.description}</div>
-                            </a>
+                                <a href={item.url} className="news-link">Full article</a>
+                            </div>
                         </div>
                     )
                 })}

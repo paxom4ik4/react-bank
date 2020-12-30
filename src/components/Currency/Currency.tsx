@@ -45,7 +45,7 @@ const Currency = ({isLogged}:any): JSX.Element => {
     return (
         <div className={isLogged?currencyClassSmall:currencyClass}>
             <div className="currency-header">
-                <div className="currency-heading">cryptocurrency rates</div>
+                <div className="currency-heading">Cryptocurrency rates</div>
                 <div className="currency-value">
                     <div className={value === 'USD' ? usdActive : usdUnActive} onClick={() => valueHandler('USD')}>USD</div>
                     <div className={value === 'EUR' ? eurActive : eurUnActive} onClick={() => valueHandler('EUR')}>EUR</div>
